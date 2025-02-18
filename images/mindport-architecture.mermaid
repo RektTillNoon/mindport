@@ -1,0 +1,79 @@
+graph TD
+    classDef userInterface fill:#0066cc,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    classDef cognitiveKernel fill:#8a2be2,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    classDef aiOrchestration fill:#00cc66,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    classDef dataLayer fill:#ff9933,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    classDef computeLayer fill:#cc3333,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    classDef securityLayer fill:#00cccc,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    classDef regulatoryLayer fill:#ffcc00,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    classDef networkLayer fill:#666666,stroke:#ffffff,stroke-width:2px,color:#ffffff
+
+    %% User Interface Layer
+    UI[User Interface Layer]
+    UI --> BCI[Brain-Computer Interface]
+    UI --> Bio[Biometric Auth]
+    UI --> Crypto[Crypto Wallet]
+    class UI,BCI,Bio,Crypto userInterface
+
+    %% Core Components
+    CK[Core Cognitive Kernel]
+    UI --> CK
+
+    %% Branches from Core
+    CK --> AIO[AI Orchestration]
+    CK --> DL[Data Layer]
+    CK --> CL[Compute Layer]
+    CK --> SP[Security & Privacy]
+    CK --> RC[Regulatory Compliance]
+    CK --> NL[Network Layer]
+    CK --> WF[Workflow Composition]
+    CK --> NLP[NLP Engine]
+    class CK,WF,NLP cognitiveKernel
+
+    %% AI Orchestration Branch
+    AIO --> MD[Model Discovery]
+    AIO --> MM[Model Marketplace]
+    AIO --> LM[Local Models]
+    LM --> Container[Container Orchestration]
+    subgraph Container
+        K8s[Kubernetes]
+        DS[Docker Swarm]
+    end
+    class AIO,MD,MM,LM,Container aiOrchestration
+
+    %% Data Layer Branch
+    DL --> DM[Data Marketplace]
+    DL --> MID[Mediators of Individual Data]
+    DL --> DS1[Distributed Storage]
+    subgraph DStorage[Storage Solutions]
+        IPFS[IPFS]
+        Swarm[Swarm]
+    end
+    DS1 --> DStorage
+    class DL,DM,MID,DS1,DStorage dataLayer
+
+    %% Compute Layer Branch
+    CL --> RA[Resource Allocation]
+    CL --> VI[Vendor Infrastructure]
+    CL --> RP[Resource Pooling]
+    class CL,RA,VI,RP computeLayer
+
+    %% Security Branch
+    SP --> E2E[End-to-End Encryption]
+    SP --> ZK[Zero-Knowledge Proofs]
+    SP --> DID[Decentralized Identity]
+    class SP,E2E,ZK,DID securityLayer
+
+    %% Regulatory Branch
+    RC --> PM[Policy Management]
+    RC --> DAO[DAO Oversight]
+    class RC,PM,DAO regulatoryLayer
+
+    %% Network Branch
+    NL --> AR[Advanced Routing]
+    NL --> NS[Node Selection]
+    NL --> CO[Compression & Updates]
+    class NL,AR,NS,CO networkLayer
+
+    %% Linkage Lines
+    linkStyle default stroke-width:2px,fill:none,stroke:#ffffff
