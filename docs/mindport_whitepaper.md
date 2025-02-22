@@ -2,7 +2,7 @@
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-Kyle Collins  
+Kyle Daniel Collins  
 mindport@tutamail.com  
 February 18, 2025
 
@@ -93,6 +93,10 @@ Central to Mindport Terminal's design is the principle of user sovereignty. Whil
 
 ## 2. Core Components of the AI Terminal
 
+<img src="images/general-architecture.png" alt="General Architecture" width="600"/>
+
+_Figure 1: High-level architecture of Mindport Terminal showing key system components and their relationships_
+
 ### 2.1 Universal AI Interface and Orchestration Engine
 
 At the heart of Mindport Terminal lies its orchestration engine, a sophisticated system that serves as the central hub for all AI interactions and operations within the platform. This engine functions as an intelligent coordination system, providing an adaptive layer that discovers, enhances, and orchestrates AI models and services through natural language interfaces.
@@ -104,6 +108,10 @@ Above the discovery layer sits the workflow composition layer, which handles the
 The service abstraction layer completes the architecture by providing vendor-agnostic interfaces that standardize interaction with diverse AI services. This layer implements protocol standardization and adaptation mechanisms, enabling seamless integration of new services while maintaining consistent performance monitoring and optimization capabilities. The abstraction layer also handles service health monitoring and failover, ensuring robust and reliable operation across the platform.
 
 The engine's adaptive architecture continuously adjusts its operations based on multiple factors, including current user requirements, available computational resources, service performance metrics, regulatory compliance requirements, and privacy parameters. This dynamic adaptation ensures optimal performance while maintaining compliance with user-defined constraints and system requirements.
+
+<img src="images/detailed-architecture.png" alt="Detailed Architecture" width="600"/>
+
+_Figure 2: Detailed view of Mindport Terminal's cognitive kernel layers and their integration_
 
 #### 2.1.2 Enhanced Context Integration via Model Context Protocol (MCP)
 
@@ -188,9 +196,9 @@ In an era where artificial intelligence generates unprecedented volumes of perso
 
 At the core of this marketplace lies the concept of Mediators of Individual Data (MIDs), organizations that bridge the gap between individual data rights and market mechanisms. MIDs serve as advocates and technical intermediaries, managing the complexity of data rights while ensuring fair compensation for data creators. These entities, which can range from small cooperatives to larger institutions, establish their own terms and membership criteria while operating within a framework that prioritizes individual data dignity.
 
-The technical implementation leverages distributed storage solutions, such as those demonstrated by Swarm and IPFS, providing redundant and censorship-resistant data persistence. Through content-addressed storage protocols, the system ensures data availability and integrity while maintaining user sovereignty over their information. These storage solutions exemplify the potential for decentralized data management, though Mindport Terminal's modular architecture remains adaptable to various storage implementations.
+The technical implementation leverages distributed storage solutions, such as those demonstrated by [Swarm Protocol](https://www.ethswarm.org/) and [IPFS](https://ipfs.io/), providing redundant and censorship-resistant data persistence. Through content-addressed storage protocols, the system ensures data availability and integrity while maintaining user sovereignty over their information. These storage solutions exemplify the potential for decentralized data management, though Mindport Terminal's modular architecture remains adaptable to various storage implementations.
 
-The marketplace infrastructure implements sophisticated access control mechanisms and tokenization frameworks, drawing inspiration from projects like Ocean Protocol in demonstrating the potential for decentralized data economies. Through granular access management at the fundamental data level, the system enables customized token-gating mechanisms that can be adapted to specific use cases and privacy requirements. This infrastructure ensures that as AI systems become more sophisticated and generate increasingly detailed personal interaction data, individuals retain ownership and control over their digital footprint.
+The marketplace infrastructure implements sophisticated access control mechanisms and tokenization frameworks, drawing inspiration from projects like [Ocean Protocol](https://oceanprotocol.com/) in demonstrating the potential for decentralized data economies. Through granular access management at the fundamental data level, the system enables customized token-gating mechanisms that can be adapted to specific use cases and privacy requirements. This infrastructure ensures that as AI systems become more sophisticated and generate increasingly detailed personal interaction data, individuals retain ownership and control over their digital footprint.
 
 The system's modular design allows for integration of various distributed storage solutions and data marketplace protocols, ensuring that organizations can select or transition between different implementations while maintaining consistent data sovereignty principles. This flexibility enables the platform to evolve alongside advancing storage technologies and marketplace mechanisms while preserving its core commitment to user data rights.
 
@@ -318,7 +326,7 @@ A key innovation is the platform's ability to recognize and compensate for the v
 
 ### 6.1 Decentralized Identity and Access Management
 
-Mindport Terminal implements a sophisticated decentralized identity framework that supports both individual and collective entities while ensuring sovereignty over personal data. Drawing inspiration from established projects like Lens Protocol, this framework demonstrates the potential for self-sovereign identity systems while maintaining flexibility for emerging standards and implementations.
+Mindport Terminal implements a sophisticated decentralized identity framework that supports both individual and collective entities while ensuring sovereignty over personal data. Drawing inspiration from established projects like [Lens Protocol](https://lens.xyz/), this framework demonstrates the potential for self-sovereign identity systems while maintaining flexibility for emerging standards and implementations.
 
 #### A Seamless Identity Experience
 
@@ -346,15 +354,15 @@ Mindport Terminal implements a comprehensive approach to privacy-preserving comp
 
 First, traditional zero-knowledge computations provide the foundation for verifiable computation without data revelation. Through sophisticated implementations of zk-SNARKs, secure multi-party computation, and homomorphic encryption, the system enables complex calculations while maintaining data privacy. These protocols ensure that computational results can be verified without exposing the underlying data.
 
-Second, Web3 TEE (Trusted Execution Environment) solutions, such as those demonstrated by Phala Network, provide hardware-level security guarantees for sensitive computations. When AI agents or models need to process confidential data, TEE technology creates an isolated computational environment that remains secure even from infrastructure providers. This enables trustless execution of AI workflows while maintaining verifiable proof of correct computation. The TEE integration is particularly crucial for autonomous AI agent operations, secure model inference, and cross-chain computational tasks.
+Second, Web3 TEE (Trusted Execution Environment) solutions, such as those demonstrated by [Phala Network](https://phala.network/), provide hardware-level security guarantees for sensitive computations. When AI agents or models need to process confidential data, TEE technology creates an isolated computational environment that remains secure even from infrastructure providers. This enables trustless execution of AI workflows while maintaining verifiable proof of correct computation. The TEE integration is particularly crucial for autonomous AI agent operations, secure model inference, and cross-chain computational tasks.
 
-Third, revolutionary approaches to secure computation, as pioneered by projects like Nillion, provide additional protection for high-value data processing, particularly crucial for neural interface data and sensitive personal information. Through advanced peer-to-peer secure computation networks, operations can occur on masked data while maintaining absolute privacy, enabling AI systems to learn and adapt without ever accessing raw sensitive data.
+Third, revolutionary approaches to secure computation, as pioneered by projects like [Nillion](https://nillion.com/), provide additional protection for high-value data processing, particularly crucial for neural interface data and sensitive personal information. Through advanced peer-to-peer secure computation networks, operations can occur on masked data while maintaining absolute privacy, enabling AI systems to learn and adapt without ever accessing raw sensitive data.
 
 The modular nature of Mindport Terminal's infrastructure allows for seamless integration of various privacy-preserving computation protocols and implementations. While current projects like Phala and Nillion demonstrate the potential of these technologies, the system remains adaptable to emerging solutions and alternative implementations. This flexibility ensures that organizations can choose or switch between different privacy-preserving computation providers while maintaining consistent security guarantees and operational patterns.
 
 ### 6.3 MID-Managed Data Governance
 
-The implementation of Mediators of Individual Data (MIDs) marks a transformative approach to data governance, operationalizing Jaron Lanier's vision of data dignity within Mindport Terminal's framework. This section details the architectural and governance mechanisms that enable MIDs to bridge individual data rights and collective AI advancement.
+The implementation of Mediators of Individual Data (MIDs) marks a transformative approach to data governance, operationalizing [Jaron Lanier's vision of data dignity](https://www.youtube.com/watch?v=Np5ri-KktNs) within Mindport Terminal's framework. This section details the architectural and governance mechanisms that enable MIDs to bridge individual data rights and collective AI advancement.
 
 #### Technical Architecture
 
